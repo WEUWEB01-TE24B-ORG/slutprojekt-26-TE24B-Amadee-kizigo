@@ -34,8 +34,11 @@ ul {
 
 /* Utseende på sidan */
 body {
-    background-color: #04052eff;
+     background-color: var(--prussian-blue); 
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
+
 
 .kontainer {
     margin: 0 auto;
@@ -44,22 +47,31 @@ body {
 }
 
 .kontainer h1 {
-    color: rgb(164, 197, 212)
+    color: rgb(164, 197, 212);
+     font-family: "Abril Fatface", serif; 
 }
 
-.kontainer .meny {}
+.kontainer .meny { margin-bottom: 20px;}
 
 .kontainer .meny a {
  background-color:#22007cff;
    color: rgb(164, 197, 212);
-   padding: 5px;
-   border-radius: 5px;
+
+     padding: 8px 12px; 
+    border-radius: 5px;
+    text-decoration: none; 
+    margin-right: 5px; 
+    display: inline-block;      
+    transition: 0.4s;
    
-   
+}
+.kontainer .meny a:hover {
+    background-color: var(--deep-twilight);
 }
 
 .kontainer h2 {
-     color: rgb(164, 197, 212)
+     color: rgb(164, 197, 212);
+     margin-top: 20px;
 }
 
 .kontainer figure {}
@@ -74,10 +86,66 @@ body {
     border-color: #140152ff;
 }
 
-.kontainer figure figcaption {}
+.kontainer figure figcaption {color: rgb(164, 197, 212);
+font-style: oblique;
+font-size: 30px;
+  line-height: 1;
+}
 
 .kontainer p {
     color: rgb(164, 197, 212);
+     margin-bottom: 15px;
 }
 
-.kontainer p a {}
+.kontainer p a {
+     color: white;
+     text-decoration: underline; 
+}
+
+
+/*Responsivitet */
+@media (max-width: 900px) {
+    .kontainer {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .kontainer figure img {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px 0;
+    }
+}
+
+
+/* DARK MODE */
+.dark-mode {
+    background-color: #02010a;
+    color: rgb(164, 197, 212);
+}
+
+.dark-mode .meny a {
+    background-color: #140152;
+}
+
+.dark-mode .meny a:hover {
+    background-color: #22007c;
+}
+
+#darkModeBtn {
+    display: block;
+  
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #22007c;
+    color: rgb(164, 197, 212);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#darkModeBtn:hover {
+    background-color: #140152;
+    transform: scale(1.05);
+}
